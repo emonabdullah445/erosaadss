@@ -11,8 +11,6 @@ import TopBar from "./components/TopBar";
 function Home() {
   const [showModal, setShowModal] = useState(false);
 
-  // const { login } = useMockLogin(adminId, posterId, setShowModal);
-
   return <>Eros</>;
 }
 
