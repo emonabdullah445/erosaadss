@@ -70,7 +70,7 @@ function Security({ setShowModal }) {
                 <div className="my-5 flex justify-start">
                   <div className="w-full lg:w-[320px]">
                     <label className="text-sm text-custom-amber">
-                      Enter code hare *
+                      Enter code here *
                     </label>
                     <TextfieldWrapper
                       name="skipcode"
