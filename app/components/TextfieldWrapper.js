@@ -23,6 +23,12 @@ function TextfieldWrapper({ name, ...props }) {
     <TextField
       {...configTextfield}
       className="bg-white rounded"
+      InputProps={{
+        style: {
+          height: "10px", // Set the height
+          padding: "8px", // Adjust padding for text alignment
+        },
+      }}
       sx={{
         "& label.Mui-focused": {
           color: "#f3b917",

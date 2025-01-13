@@ -58,7 +58,7 @@ function Security({ setShowModal }) {
         >
           {(formik) => (
             <Form className="">
-              <div className="pl-5 w-[520px] h-[210px] lg:pl-8 pr-8 lg:pr-14 py-4 lg:py-7 bg-white text-black rounded">
+              <div className="pl-5 w-[540px] h-[230px] lg:pl-8 pr-8 lg:pr-14 py-4 lg:py-7 bg-white text-black rounded">
                 <h2 className="text-lg font-medium">Device Verification 1/2</h2>
                 <p className="mt-2 text-sm">
                   Please enter a <strong>Verification code</strong> for EROSADS

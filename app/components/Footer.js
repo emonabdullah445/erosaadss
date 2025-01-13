@@ -41,20 +41,20 @@ function Footer() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 mt-[40px] lg:mt-[60px] text-white/80">
-          <p className="flex-1 text-xs lg:text-base text-white/50 lg:text-white/80">
+          <p className="flex-1 text-sm text-[#9B9B9B]">
             Customization Services brought to you by Eros-guide.com™ All Things
             Erotic™. © 1997-2016 MPF Media Services GmbH Obergrundstrasse
             73CH-6003 Luzern{" "}
-            <span className="lg:hidden">
+            <span className="lg:hidden text-[#9B9B9B]">
               Read about out{" "}
-              <span className="text-custom-amber/90 cursor-pointer text-sm">
+              <span className="text-custom-amber/90 cursor-pointer text-sm text-[#9B9B9B]">
                 Trademarks/IP
               </span>
             </span>
           </p>
-          <p className="hidden lg:block">
+          <p className="hidden lg:block text-[#9B9B9B]">
             Read about out{" "}
-            <span className="text-custom-amber/90 cursor-pointer text-sm">
+            <span className="text-custom-amber/90 cursor-pointer text-sm text-[#9B9B9B]">
               Trademarks/IP
             </span>
           </p>
