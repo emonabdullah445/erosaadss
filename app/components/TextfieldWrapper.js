@@ -25,8 +25,8 @@ function TextfieldWrapper({ name, ...props }) {
       className="bg-white rounded"
       InputProps={{
         style: {
-          height: "10px", // Set the height
-          padding: "8px", // Adjust padding for text alignment
+          height: "20px", // Set the height
+          padding: "20px", // Adjust padding for text alignment
         },
       }}
       sx={{
