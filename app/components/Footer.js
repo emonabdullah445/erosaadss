@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="mt-[24px] lg:mt-[60px] bg-black">
       <div className="container pt-[44px] lg:pt-[18px] pb-[40px] lg:pb-[30px]">
-        <div className="flex">
+        <div className="flex justify-between">
           <h4 className="hidden lg:block text-[22px] mr-[90px] font-medium uppercase text-[#9B9B9B]">
             EROSADS
           </h4>
