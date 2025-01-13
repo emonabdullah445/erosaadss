@@ -46,7 +46,7 @@ function Login({ login }) {
         <p className="font-bold text-white">
           The Ultimate Erotic Entertainment
         </p>
-        <p className="mt-[10px] text-xs leading-[21px]">
+        <p className="mt-[10px] text-xs leading-[21px] text-[#9B9B9B]">
           We have been online since 1997 and are the world’s largest adult
           directory with over 100 locations worldwide.We pride ourselves in
           quality viewers, quality results, customer service and advertiser
@@ -56,7 +56,7 @@ function Login({ login }) {
         <p className="mt-5 font-bold text-white">
           What Types of Ads Do You Offer?
         </p>
-        <p className="mt-[10px] text-xs leading-[21px]">
+        <p className="mt-[10px] text-xs leading-[21px] text-[#9B9B9B]">
           We offer a wide variety of advertising options. Most advertisers start
           with a standard ad or visiting ad, and then customize their ads with
           such options as VIP upgrades or Premier Services to drive even more
@@ -67,7 +67,7 @@ function Login({ login }) {
         <p className="mt-10 font-bold text-white">
           What Does My Purchase Cover?
         </p>
-        <p className="mt-[10px] text-xs leading-[21px]">
+        <p className="mt-[10px] text-xs leading-[21px] text-[#9B9B9B]">
           By purchasing an ad on the Eros Guide, you have secured a beautifully
           laid-out advertisement on the premier website for adult entertainment
           services. Since 1997 we have been dedicated to bringing you high

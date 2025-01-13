@@ -9,22 +9,25 @@ function Footer() {
             EROSADS
           </h4>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-[55px] gap-y-5 lg:gap-y-[27px] text-xs lg:text-sm text-white/80">
-            <p className="cursor-pointer hover:text-custom-amber">Contact</p>
-            <p className="cursor-pointer hover:text-custom-amber">
-              Terms & Conditions
-            </p>
-            <p className="cursor-pointer hover:text-custom-amber">F.A.Q.</p>
-            <p className="cursor-pointer hover:text-custom-amber">
-              2257 Exemption
-            </p>
-            <p className="cursor-pointer hover:text-custom-amber">Privacy</p>
-            <p className="cursor-pointer hover:text-custom-amber">
-              Advertiser Agreement
-            </p>
-            <p className="cursor-pointer hover:text-custom-amber">
-              About ErosAds
-            </p>
+          <div className="flex justify-evenly flex-wrap gap-x-[55px] gap-y-5 lg:gap-y-[27px] text-xs lg:text-sm text-white/80">
+            <div className="">
+              <p className="cursor-pointer hover:text-custom-amber">Contact</p>
+              <p className="cursor-pointer hover:text-custom-amber">
+                Terms & Conditions
+              </p>
+            </div>
+            <div className="">
+              <p className="cursor-pointer hover:text-custom-amber">F.A.Q.</p>
+              <p className="cursor-pointer hover:text-custom-amber">Privacy</p>
+            </div>
+            <div className="">
+              <p className="cursor-pointer hover:text-custom-amber">
+                Advertiser Agreement
+              </p>
+              <p className="cursor-pointer hover:text-custom-amber">
+                About ErosAds
+              </p>
+            </div>
             <p className="cursor-pointer hover:text-custom-amber">
               DMCA Complaints
             </p>

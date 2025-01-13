@@ -58,16 +58,14 @@ function Security({ setShowModal }) {
         >
           {(formik) => (
             <Form className="">
-              <div className="pl-5 lg:pl-8 pr-8 lg:pr-14 py-4 lg:py-7 bg-white text-black rounded">
-                <h2 className="text-2xl font-medium">
-                  Device Verification 1/2
-                </h2>
-                <p className="mt-6 text-sm">
+              <div className="pl-5 w-[520px] h-[210px] lg:pl-8 pr-8 lg:pr-14 py-4 lg:py-7 bg-white text-black rounded">
+                <h2 className="text-lg font-medium">Device Verification 1/2</h2>
+                <p className="mt-2 text-sm">
                   Please enter a <strong>Verification code</strong> for EROSADS
                   from your <strong>Google Authenticator</strong> app
                 </p>
 
-                <div className="my-5 flex justify-start">
+                <div className="my-2 flex justify-start">
                   <div className="w-full lg:w-[320px]">
                     <label className="text-sm text-custom-amber">
                       Enter code here *
@@ -97,7 +95,7 @@ function Security({ setShowModal }) {
               <div className="mt-4 flex gap-4 justify-end">
                 <button
                   type="button"
-                  className="px-[22px] py-2 font-Arimo text-sm bg-white/50 hover:bg-white/70 border-2 border-white text-white rounded uppercase transition-all duration-300"
+                  className="px-[20px] py-1 font-Arimo text-sm bg-white/50 hover:bg-white/70 border-2 border-white text-white rounded uppercase transition-all duration-300"
                   onClick={() => setShowModal(false)}
                 >
                   cancel
