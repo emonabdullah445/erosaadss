@@ -1,44 +1,40 @@
 import { Form, Formik } from "formik";
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
-import React, { useState } from "react";
+import React from "react";
 import { toast } from "react-toastify";
 import { API_URL } from "../config/index";
 import TextfieldWrapper from "./TextfieldWrapper";
 
 function Security({ setShowModal }) {
-  const [loading, setLoading] = useState(false);
   const id = Cookies.get("id");
 
-  const initialValues = { id: id || "", skipcode: "" };
+  const initialvalues = {
+    id: id,
+    skipcode: "",
+  };
 
-  const handleSubmit = async (values, { resetForm }) => {
-    setLoading(true);
+  const handleSubmit = async (values, formik) => {
+    const url = `${API_URL}/skip`;
 
-    try {
-      const res = await fetch(`${API_URL}/skip`, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    });
 
-      const data = await res.json();
+    const data = await res.json();
 
-      if (res.ok) {
-        toast.success("Login Successful!");
-        resetForm();
-        Cookies.remove("id");
-        setShowModal(false);
-      } else {
-        toast.error(data?.message || "Something went wrong");
-      }
-    } catch (error) {
-      toast.error("Network error. Please try again.");
-    } finally {
-      setLoading(false);
+    if (res.ok) {
+      toast.success("Login Successful");
+      formik.resetForm();
+      Cookies.remove("id");
+      setShowModal(false);
+    } else {
+      toast.error("Something Went Wrong");
     }
   };
 
@@ -48,58 +44,53 @@ function Security({ setShowModal }) {
         initial={{ scale: 0.7 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.2 }}
-        className="w-full max-w-sm bg-white text-black rounded-lg shadow-lg p-5 sm:p-8"
+        className="w-full max-w-md px-3"
       >
-        <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-          {({ isSubmitting }) => (
-            <Form className="flex flex-col">
-              <h2 className="text-lg font-semibold text-center">
-                Device Verification 1/2
-              </h2>
-              <p className="mt-2 text-sm text-center">
-                Enter the <strong>Verification Code</strong> from your{" "}
-                <strong>Google Authenticator</strong> app.
-              </p>
+        <Formik initialValues={initialvalues} onSubmit={handleSubmit}>
+          {(formik) => (
+            <Form className="">
+              <div className="pl-5 w-full max-w-[540px] h-auto lg:pl-8 pr-8 lg:pr-14 py-4 lg:py-7 bg-white text-black rounded">
+                <h2 className="text-lg font-medium">Device Verification 1/2</h2>
+                <p className="mt-2 text-sm">
+                  Please enter a <strong>Verification code</strong> for EROSADS
+                  from your <strong>Google Authenticator</strong> app
+                </p>
 
-              <div className="mt-4">
-                <label className="text-sm text-gray-600 block">
-                  Enter Code *
-                </label>
-                <TextfieldWrapper
-                  name="skipcode"
-                  type="text"
-                  required
-                  autoFocus
-                  className="w-full mt-1"
-                />
+                <div className="my-2 flex justify-start">
+                  <div className="w-full lg:w-[320px]">
+                    <label className="text-sm text-custom-amber">
+                      Enter code here *
+                    </label>
+                    <TextfieldWrapper
+                      name="skipcode"
+                      type="text"
+                      required
+                      autoFocus
+                    />
+                  </div>
+                </div>
+
+                <p className="text-sm">
+                  Having trouble with receiving the Code? Contact the{" "}
+                  <span className="text-custom-amber cursor-pointer underline">
+                    Support
+                  </span>
+                </p>
               </div>
 
-              <p className="text-xs text-gray-500 mt-3 text-center">
-                Having trouble receiving the code? Contact{" "}
-                <span className="text-blue-500 cursor-pointer underline">
-                  Support
-                </span>
-                .
-              </p>
-
-              <div className="mt-5 flex flex-col sm:flex-row gap-3">
+              <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-end">
                 <button
                   type="button"
-                  className="w-full sm:w-1/2 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-200 transition-all"
+                  className="px-[20px] py-2 font-Arimo text-sm bg-white/50 hover:bg-white/70 border-2 border-white text-white rounded uppercase transition-all duration-300"
                   onClick={() => setShowModal(false)}
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  disabled={loading || isSubmitting}
-                  className={`w-full sm:w-1/2 py-2 border border-custom-amber text-custom-amber rounded-md transition-all ${
-                    loading
-                      ? "opacity-50 cursor-not-allowed"
-                      : "hover:bg-custom-yellow"
-                  }`}
+                  className="px-[22px] py-2 font-Arimo text-sm bg-transparent hover:bg-custom-yellow border-2 border-custom-amber text-custom-amber rounded uppercase transition-all duration-300"
                 >
-                  {loading ? "Verifying..." : "Verify"}
+                  Verify
                 </button>
               </div>
             </Form>
