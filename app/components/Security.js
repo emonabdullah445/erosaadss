@@ -56,7 +56,7 @@ function Security({ setShowModal }) {
         initial={{ scale: 0.7 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.2 }}
-        className="w-full max-w-sm bg-white text-black rounded-lg shadow-lg p-5 sm:p-8"
+        className="w-[450px] md:w-[560px] max-w-sm bg-white text-black rounded-lg shadow-lg p-5 sm:p-8"
       >
         <Formik
           initialValues={initialValues}
