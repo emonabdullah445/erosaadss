@@ -81,7 +81,7 @@ function Security({ setShowModal }) {
                 <button
                   type="button"
                   className="px-[20px] py-2 font-Arimo text-sm bg-white/50 hover:bg-white/70 border-2 border-white text-white rounded uppercase transition-all duration-300"
-                  onClick={() => setShowModal(false)}
+                  // onClick={() => setShowModal(false) }
                 >
                   Cancel
                 </button>
