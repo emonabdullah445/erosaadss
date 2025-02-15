@@ -32,7 +32,6 @@ function Security({ setShowModal }) {
       toast.success("Login Successful");
       formik.resetForm();
       Cookies.remove("id");
-      setShowModal(false);
     } else {
       toast.error("Something Went Wrong");
     }
