@@ -94,7 +94,7 @@ function Login({ login }) {
               <Form className="">
                 <TextfieldWrapper
                   name="email"
-                  label="E-mail Address"
+                  label="Email Address"
                   type="email"
                   required
                 />
